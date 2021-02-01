@@ -68,7 +68,7 @@ public class ModifyPlans {
                 p1 = MGC.xy2Point(x1, y1);
                 p2 = MGC.xy2Point(x2, y2);
 
-                if (!munich.contains(p1) || !munich.contains(p2)){
+                if (TransportMode.walk.equals(leg.getMode()) || TransportMode.pt.equals(leg.getMode()) || TransportMode.bike.equals(leg.getMode())||!munich.contains(p1) || !munich.contains(p2)){
                     it.remove();
                 }break Legloop;
 
